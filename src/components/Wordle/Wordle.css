@@ -1,0 +1,63 @@
+.wordle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 800px;
+  padding-left: 120px;
+}
+
+.wordle-letter {
+  height: 80px;
+  width: 80px;
+  font-size: 20px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.wordle-word {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputs-wrapper {
+  margin: 5px;
+  padding: 5px;
+}
+
+.inputs-wrapper.focused {
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.wordle-letter {
+  margin: 2px;
+}
+
+.wordle-letter.correct {
+  background: limegreen;
+  color: black;
+}
+
+.wordle-letter.wrongIndex {
+  background: yellow;
+  color: black;
+}
+
+.wordle-confirm {
+  height: 84px;
+  width: 140px;
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 760px) {
+  .wordle-letter {
+    height: 50px;
+    width: 50px;
+  }    
+    
+  .wordle-confirm {
+    height: 54px;
+  }
+}
