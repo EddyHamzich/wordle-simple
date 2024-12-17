@@ -2,12 +2,14 @@
 type LetterState = "wrong" | "wrongIndex" | "correct";
 
 export function getLetterState(
+  isNotWord: boolean,
   isFocused: boolean,
   inputIndex: number,
   inputValues: string[],
   correctWord: string
 ): LetterState {
 
+  if(isNotWord) return "wrong";
   if(isFocused && inputValues.join("") !== correctWord) return "wrong";
 
   const target = correctWord.split('');

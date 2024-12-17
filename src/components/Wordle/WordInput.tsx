@@ -26,7 +26,7 @@ export function WordInput({ words, correctWord, focusIndex, setFocusIndex, isFoc
             onChange={(e) => (
               setInputValues(inputValues.map((letter, i) => i == letterIndex ? e.target.value.toLowerCase() : letter))
             )}
-            className={`wordle-letter ${getLetterState(isFocused, letterIndex, inputValues, correctWord)}`}
+            className={`wordle-letter ${getLetterState(isNotWord, isFocused, letterIndex, inputValues, correctWord)}`}
             maxLength={1}
             readOnly={!isFocused}
             tabIndex={!isFocused ? -1 : 0}
