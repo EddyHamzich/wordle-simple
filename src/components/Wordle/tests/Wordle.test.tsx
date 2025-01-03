@@ -29,7 +29,7 @@ describe('Wordle', () => {
     await user.click(screen.getByTestId("wordle-confirm 0"));
 
     expect(char0).toHaveClass("wrong");
-    expect(char1).not.toHaveClass("wrongIndex");
+    expect(char1).toHaveClass("wrong");
     expect(char2).toHaveClass("correct");
     expect(char3).toHaveClass("correct");
     expect(char4).toHaveClass("correct");
